@@ -15,10 +15,16 @@ const companies = [
   "FIEMT",
 ];
 
-const skills = [
-  ["AWS, Azure & GCP", "Java, .NET, React, Node.js"],
-  ["DevOps & Kubernetes", "Metodologias Ágeis"],
-  ["Governança de TI", "LGPD & Segurança"],
+const skillsLeft = [
+  "AWS, Azure & GCP",
+  "DevOps & Kubernetes",
+  "Governança de TI",
+];
+
+const skillsRight = [
+  "Java, .NET, React, Node.js",
+  "Metodologias Ágeis",
+  "LGPD & Segurança",
 ];
 
 const AboutSection = () => {
@@ -28,13 +34,13 @@ const AboutSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-start">
           {/* Left Content */}
           <div>
-            <span className="text-primary font-medium text-sm tracking-wider uppercase mb-3 block">
+            <span className="text-primary font-semibold text-sm tracking-wider uppercase mb-3 block">
               Experiência que faz a diferença
             </span>
             <h2 className="font-display font-bold text-3xl md:text-4xl mb-6">
               Liderança técnica de <span className="text-gradient">alto nível</span>
             </h2>
-            <p className="text-muted-foreground text-lg mb-8 leading-relaxed">
+            <p className="text-muted-foreground text-base lg:text-lg mb-8 leading-relaxed">
               Nossa liderança técnica é conduzida por <strong className="text-foreground">Áidano Lima</strong>, profissional com atuação em empresas de referência no mercado brasileiro, liderando projetos de alta complexidade em cloud, desenvolvimento e governança de TI.
             </p>
 
@@ -50,22 +56,28 @@ const AboutSection = () => {
               </div>
             </div>
 
-            {/* Skills */}
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((column, colIndex) => (
-                <ul key={colIndex} className="space-y-3">
-                  {column.map((skill, skillIndex) => (
-                    <li key={skillIndex} className="flex items-center gap-2 text-sm text-muted-foreground">
-                      <span className="w-1.5 h-1.5 rounded-full bg-primary" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              ))}
+            {/* Skills - Two columns */}
+            <div className="grid grid-cols-2 gap-x-8 gap-y-3">
+              <ul className="space-y-3">
+                {skillsLeft.map((skill, index) => (
+                  <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                    {skill}
+                  </li>
+                ))}
+              </ul>
+              <ul className="space-y-3">
+                {skillsRight.map((skill, index) => (
+                  <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary flex-shrink-0" />
+                    {skill}
+                  </li>
+                ))}
+              </ul>
             </div>
           </div>
 
-          {/* Right Stats Grid */}
+          {/* Right Stats Grid - 2x2 layout */}
           <div className="grid grid-cols-2 gap-4">
             {stats.map((stat, index) => (
               <div key={index} className="stats-card">
