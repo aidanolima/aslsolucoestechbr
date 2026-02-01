@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# ASL Soluções Tech - Apresentação
 
-## Project info
+Este é o repositório oficial do site da ASL Soluções Tech, uma empresa focada em desenvolvimento de software, consultoria em nuvem e gestão de projetos.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+## Sobre a Empresa e o Fundador
 
-## How can I edit this code?
+**Aidano Lima: Desenvolvedor Full Stack, Cloud e Gerente de Projetos**
 
-There are several ways of editing your application.
+Aidano Lima é um profissional de TI com mais de 22 anos de experiência nos setores público e privado, especializado na construção de soluções digitais escaláveis e eficientes. Sua expertise abrange desenvolvimento web, otimização de aplicações e computação em nuvem, com um foco em tecnologias de impacto e inovação.
 
-**Use Lovable**
+Com uma sólida trajetória em gestão de projetos de desenvolvimento de software, Aidano atendeu clientes em setores como bancário, telecomunicações, educação e planejamento de operações. Ele é proficiente em gestão de stakeholders, atuando como ponte entre clientes, fornecedores e equipes, e possui vasta experiência em liderança técnica e coordenação de TI em diversas organizações de grande porte.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+### Habilidades Técnicas
+*   **Frontend:** HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, TypeScript, React JS, Flutter.
+*   **Backend:** Java, Python, Node JS, Express JS, MongoDB, GraphQL API, RESTful API, Microservices.
+*   **Cloud:** AWS, Google Cloud (GCP), Oracle Cloud (OCI), DevOps, Kubernetes.
+*   **Ferramentas e Metodologias:** Git/GitHub, OAuth 2.0, JWT, Nginx, Desenvolvimento Ágil, ITIL V3.
 
-Changes made via Lovable will be committed automatically to this repo.
+## Análise Técnica do Projeto
 
-**Use your preferred IDE**
+Este projeto é uma aplicação web moderna construída com as seguintes tecnologias:
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+*   **Framework Frontend:** [React](https://react.dev/) com [TypeScript](https://www.typescriptlang.org/) para uma base de código robusta e tipada.
+*   **Build Tool:** [Vite](https://vitejs.dev/) para um desenvolvimento rápido e otimizado.
+*   **Estilização:** [Tailwind CSS](https://tailwindcss.com/) para uma estilização utilitária e eficiente.
+*   **Componentes UI:** [shadcn/ui](https://ui.shadcn.com/), uma coleção de componentes de UI reusáveis e acessíveis.
+*   **Roteamento:** [React Router](https://reactrouter.com/) para a navegação entre as páginas.
+*   **Testes:** [Vitest](https://vitest.dev/) para testes unitários e de componentes.
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+A estrutura do projeto é modular, separando componentes, páginas, hooks e serviços, o que facilita a manutenção e escalabilidade.
 
-Follow these steps:
+## Como Executar o Projeto Localmente
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Para executar este projeto em seu ambiente local, siga os passos abaixo.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+**Pré-requisitos:**
+*   [Node.js](https://nodejs.org/) (versão 18 ou superior)
+*   [npm](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
 
-# Step 3: Install the necessary dependencies.
-npm i
+**Passos:**
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+1.  **Clone o repositório:**
+    ```sh
+    git clone https://github.com/aslsolucoestechbr/aslsolucoestechbr.git
+    ```
 
-**Edit a file directly in GitHub**
+2.  **Navegue até o diretório do projeto:**
+    ```sh
+    cd aslsolucoestechbr
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3.  **Instale as dependências:**
+    ```sh
+    npm install
+    ```
 
-**Use GitHub Codespaces**
+4.  **Inicie o servidor de desenvolvimento:**
+    ```sh
+    npm run dev
+    ```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+Após executar esses comandos, a aplicação estará disponível em `http://localhost:5173` (ou em outra porta, se a 5173 estiver ocupada).
