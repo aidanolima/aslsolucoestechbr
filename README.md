@@ -4,11 +4,11 @@ Este é o repositório oficial do site da ASL Soluções Tech, uma empresa focad
 
 ## Sobre a Empresa e o Fundador
 
-**Aidano Lima: Desenvolvedor Full Stack, Cloud e Gerente de Projetos**
+**Áidano Lima: Desenvolvedor Full Stack, Cloud e Gerente de Projetos**
 
-Aidano Lima é um profissional de TI com mais de 22 anos de experiência nos setores público e privado, especializado na construção de soluções digitais escaláveis e eficientes. Sua expertise abrange desenvolvimento web, otimização de aplicações e computação em nuvem, com um foco em tecnologias de impacto e inovação.
+Áidano Lima é um profissional de TI com mais de 22 anos de experiência nos setores público e privado, especializado na construção de soluções digitais escaláveis e eficientes. Sua expertise abrange desenvolvimento web, otimização de aplicações e computação em nuvem, com um foco em tecnologias de impacto e inovação.
 
-Com uma sólida trajetória em gestão de projetos de desenvolvimento de software, Aidano atendeu clientes em setores como bancário, telecomunicações, educação e planejamento de operações. Ele é proficiente em gestão de stakeholders, atuando como ponte entre clientes, fornecedores e equipes, e possui vasta experiência em liderança técnica e coordenação de TI em diversas organizações de grande porte.
+Com uma sólida trajetória em gestão de projetos de desenvolvimento de software, Áidano atendeu clientes em setores como bancário, telecomunicações, educação e planejamento de operações. Ele é proficiente em gestão de stakeholders, atuando como ponte entre clientes, fornecedores e equipes, e possui vasta experiência em liderança técnica e coordenação de TI em diversas organizações de grande porte.
 
 ### Habilidades Técnicas
 *   **Frontend:** HTML, CSS, Tailwind CSS, Bootstrap, JavaScript, TypeScript, React JS, Flutter.
@@ -20,11 +20,21 @@ Com uma sólida trajetória em gestão de projetos de desenvolvimento de softwar
 
 Este projeto é uma aplicação web moderna construída com as seguintes tecnologias:
 
-*   **Framework Frontend:** [React](https://react.dev/) com [TypeScript](https://www.typescriptlang.org/) para uma base de código robusta e tipada.
-*   **Build Tool:** [Vite](https://vitejs.dev/) para um desenvolvimento rápido e otimizado.
-*   **Estilização:** [Tailwind CSS](https://tailwindcss.com/) para uma estilização utilitária e eficiente.
-*   **Componentes UI:** [shadcn/ui](https://ui.shadcn.com/), uma coleção de componentes de UI reusáveis e acessíveis.
+*   **Framework Frontend:** 
+    [React](https://react.dev/)
+    [TypeScript](https://www.typescriptlang.org/) para uma base de código robusta e tipada.
+
+*   **Build Tool:** 
+    [Vite](https://vitejs.dev/) para um desenvolvimento rápido e otimizado.
+*   
+    **Estilização:** 
+    [Tailwind CSS](https://tailwindcss.com/) para uma estilização utilitária e eficiente.
+
+*   **Componentes UI:** 
+    [shadcn/ui](https://ui.shadcn.com/), uma coleção de componentes de UI reusáveis e acessíveis.
+
 *   **Roteamento:** [React Router](https://reactrouter.com/) para a navegação entre as páginas.
+
 *   **Testes:** [Vitest](https://vitest.dev/) para testes unitários e de componentes.
 
 A estrutura do projeto é modular, separando componentes, páginas, hooks e serviços, o que facilita a manutenção e escalabilidade.
