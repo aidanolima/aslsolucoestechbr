@@ -13,6 +13,11 @@ const Header = () => {
     { href: "#contato", label: "Contato" },
   ];
 
+  // Configuração do WhatsApp
+  const phoneNumber = "5581999207087";
+  const message = "Olá! Vim pelo site da ASL Soluções Tech e gostaria de falar com um especialista.";
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-border">
       <div className="container mx-auto px-4 lg:px-8">
@@ -40,11 +45,13 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* CTA Button */}
+          {/* CTA Button (Desktop) */}
           <div className="hidden lg:block">
-            <Button variant="cta" size="lg">
-              Falar com Especialista
-            </Button>
+            <a href={whatsappUrl} target="_blank" rel="noopener noreferrer">
+              <Button variant="cta" size="lg">
+                Falar com Especialista
+              </Button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -71,9 +78,18 @@ const Header = () => {
                   {link.label}
                 </a>
               ))}
-              <Button variant="cta" className="mt-4 w-full">
-                Falar com Especialista
-              </Button>
+              
+              {/* CTA Button (Mobile) */}
+              <a 
+                href={whatsappUrl} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                onClick={() => setIsMenuOpen(false)} // Fecha o menu ao clicar
+              >
+                <Button variant="cta" className="mt-4 w-full">
+                  Falar com Especialista
+                </Button>
+              </a>
             </nav>
           </div>
         )}

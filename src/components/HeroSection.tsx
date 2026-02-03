@@ -9,6 +9,20 @@ const HeroSection = () => {
     "AWS, Azure & Google Cloud",
   ];
 
+  // Configuração do WhatsApp para o botão de diagnóstico
+  const phoneNumber = "5581999207087";
+  const message = "Olá! Vim pelo site da ASL Soluções Tech e gostaria de solicitar um diagnóstico gratuito.";
+  const diagnosticUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+
+  // Função para rolagem suave até a seção de serviços
+  const handleScrollToServices = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault(); // Evita o pulo brusco padrão do navegador
+    const section = document.querySelector('#servicos'); // Busca a seção pelo ID "servicos"
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background */}
@@ -55,13 +69,31 @@ const HeroSection = () => {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
-            <Button variant="cta" size="xl">
-              Solicitar diagnóstico gratuito
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button variant="outline" size="xl">
-              Conhecer nossos serviços
-            </Button>
+            
+            {/* Botão 1: WhatsApp (Diagnóstico) */}
+            <a 
+              href={diagnosticUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button variant="cta" size="xl" className="w-full sm:w-auto">
+                Solicitar diagnóstico gratuito
+                <ArrowRight className="w-5 h-5 ml-2" />
+              </Button>
+            </a>
+            
+            {/* Botão 2: Scroll Suave (Serviços) */}
+            <a 
+              href="#servicos" 
+              onClick={handleScrollToServices}
+              className="inline-block"
+            >
+              <Button variant="outline" size="xl" className="w-full sm:w-auto">
+                Conhecer nossos serviços
+              </Button>
+            </a>
+
           </div>
         </div>
       </div>
