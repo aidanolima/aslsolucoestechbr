@@ -47,7 +47,7 @@ const DifferentialsSection = () => {
               Por que nos escolher
             </span>
             <h2 className="font-display font-bold text-3xl md:text-4xl mb-10">
-              Diferenciais que <span className="text-primary">fazem a diferença</span>
+              Diferenciais que <span className="text-primary">fazem acontecer</span>
             </h2>
 
             <div className="space-y-6">
