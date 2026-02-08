@@ -27,19 +27,27 @@ const Footer = () => {
     <footer className="dark-section text-white pt-16 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8 mb-12">
+          
           {/* Brand */}
           <div className="lg:col-span-1">
             <a href="#" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-xl bg-primary flex items-center justify-center">
-                <span className="text-primary-foreground font-display font-bold text-sm">ASL</span>
-              </div>
+              
+              {/* --- ALTERAÇÃO: Logo Imagem --- */}
+              <img 
+                src="/og-image.png" 
+                alt="Logo ASL" 
+                className="h-10 w-auto object-contain rounded-md" 
+              />
+              
               <span className="font-display font-semibold text-lg">
                 ASL <span className="font-normal text-white/70">Soluções Tech</span>
               </span>
             </a>
+            
             <p className="text-white/60 text-sm mb-6 leading-relaxed">
               Tecnologia, inovação e confiança para impulsionar negócios no presente e no futuro.
             </p>
+            
             <div className="flex gap-3">
               {socialLinks.map((social, index) => (
                 <a
@@ -116,7 +124,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-white/50 text-sm">
-            © 2026 ASL Soluções Tech. Todos os direitos reservados.
+            © 2026 ASL Soluções Tech. Todos os direitos reservados - CNPJ 58.256.588/0001-29.
           </p>
           <p className="text-white/50 text-sm">
             Desenvolvido por Áidano Lima
