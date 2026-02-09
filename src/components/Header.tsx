@@ -7,6 +7,7 @@ const Header = () => {
 
   const navLinks = [
     { href: "#servicos", label: "Serviços" },
+    { href: "#produtos", label: "Produtos" }, // Novo item adicionado
     { href: "#sobre", label: "Sobre" },
     { href: "#diferenciais", label: "Diferenciais" },
     { href: "#processo", label: "Processo" },
@@ -24,19 +25,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            
-            {/* ALTERAÇÃO DE TAMANHO AQUI:
-               h-12 (48px) para mobile
-               lg:h-16 (64px) para desktop
-               Isso fará o logo ficar bem maior sem estourar o header.
-            */}
             <img 
               src="/og-image.png" 
               alt="Logo ASL" 
               className="h-12 lg:h-16 w-auto object-contain rounded-md" 
             />
-
-            {/* Texto ao lado do Logo */}
             <span className="font-display font-semibold text-foreground text-lg">
               ASL <span className="font-normal text-muted-foreground">Soluções Tech</span>
             </span>

@@ -20,7 +20,7 @@ const Footer = () => {
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/aidanolima/" },
     { icon: Github, href: "https://github.com/aidanolima" },
-    { icon: Instagram, href: "#" },
+    { icon: Instagram, href: "https://www.instagram.com/aslsolucoestech" },
   ];
 
   return (
@@ -113,8 +113,8 @@ const Footer = () => {
               </li>
               <li className="flex items-center gap-3 text-white/60 text-sm">
                 <Mail className="w-4 h-4 text-primary flex-shrink-0" />
-                <a href="mailto:aidanolima@gmail.com" className="hover:text-primary transition-colors">
-                  aidanolima@gmail.com
+                <a href="mailto:aidanolima@aslsolucoestech.com.br" className="hover:text-primary transition-colors">
+                  aidanolima@aslsolucoestech.com.br
                 </a>
               </li>
             </ul>
