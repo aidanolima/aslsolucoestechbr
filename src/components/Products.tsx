@@ -46,10 +46,10 @@ const Products = () => {
       description: "Software jurídico com foco na automação de documentos e fluxos de trabalho. Ideal para escritórios que desejam aumentar a produtividade e reduzir riscos operacionais. Permite criar, revisar e armazenar contratos de forma segura.",
       icon: Scale,
       image: "/produto-gestjus.png", 
-      url: "#",
+      url: "https://gestjus.com.br/",
       tags: ["Jurídico", "Automação", "Software"],
-      isDirectLink: false,
-      isDisabled: true 
+      isDirectLink: true,
+      isDisabled: false 
     },
     {
       id: 5,
