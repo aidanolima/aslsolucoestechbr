@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, ShieldCheck, PawPrint, ShoppingCart, Scale, ChevronLeft, ChevronRight, Play } from "lucide-react";
+import { ExternalLink, ShieldCheck, PawPrint, ShoppingCart, Scale, ChevronLeft, ChevronRight, Play, Compass } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DemoModal from "@/components/ui/DemoModal";
 
@@ -45,11 +45,22 @@ const Products = () => {
       title: "GestJus",
       description: "Software jurídico com foco na automação de documentos e fluxos de trabalho. Ideal para escritórios que desejam aumentar a produtividade e reduzir riscos operacionais. Permite criar, revisar e armazenar contratos de forma segura.",
       icon: Scale,
-      image: "/produto-gestjus.png", // <-- Caminho atualizado para a imagem do print!
+      image: "/produto-gestjus.png", 
       url: "#",
       tags: ["Jurídico", "Automação", "Software"],
       isDirectLink: false,
       isDisabled: true 
+    },
+    {
+      id: 5,
+      title: "Park Portais do Roncador",
+      description: "No interior místico onde o cerrado abraça florestas ancestrais, o destino convida a uma imersão profunda entre trilhas secretas e cachoeiras que ecoam lendas. Aqui, cada passo ativa energia telúrica e cura o corpo e a alma com elementos naturais e saberes indígenas.",
+      icon: Compass,
+      image: "/portal-roncador.png", 
+      url: "https://parkportaisdoroncador.netlify.app/", 
+      tags: ["Landing Page", "Turismo", "Natureza"],
+      isDirectLink: true,
+      isDisabled: false 
     }
   ];
 
