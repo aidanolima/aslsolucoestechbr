@@ -61,6 +61,17 @@ const Products = () => {
       tags: ["Landing Page", "Turismo", "Natureza"],
       isDirectLink: true,
       isDisabled: false 
+    },
+    {
+      id: 6,
+      title: "Débora Monteiro Advogada",
+      description: "LandingPage de serviços da Advogada Débora Monteiro, atuando com dedicação, ética e excelência para garantir a melhor solução jurídica para o seu caso, focando na segurança e bem-estar de nossos clientes.",
+      icon: Scale,
+      image: "/produto-debora.png", 
+      url: "https://deboramonteiroadv.vercel.app/", 
+      tags: ["Landing Page", "Direito", "Justiça"],
+      isDirectLink: true,
+      isDisabled: false 
     }
   ];
 
@@ -144,7 +155,12 @@ const Products = () => {
                     src={product.image} 
                     alt={`Interface do ${product.title}`}
                     className="w-full h-48 lg:h-56 object-cover object-top group-hover:scale-105 transition-transform duration-500"
-                    onError={(e) => (e.currentTarget.style.display = 'none')} 
+                    onError={(e) => {
+                      console.warn(`[DEBUG] Imagem não encontrada no caminho: ${product.image}`);
+                      // Comentei a linha abaixo temporariamente para você poder ver o ícone de imagem quebrada e debugar.
+                      // Volte a descomentar quando confirmar que a imagem está na pasta certa!
+                      // e.currentTarget.style.display = 'none'; 
+                    }} 
                   />
                 </div>
 
