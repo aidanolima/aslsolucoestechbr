@@ -22,6 +22,8 @@
     "noImplicitAny": false,
     "noFallthroughCasesInSwitch": false,
 
+    /* Silencia o aviso de depreciação do TypeScript */
+    "ignoreDeprecations": "5.0",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]
