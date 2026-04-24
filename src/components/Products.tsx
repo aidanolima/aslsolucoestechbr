@@ -46,7 +46,7 @@ const Products = () => {
       description: "Software jurídico com foco na automação de documentos e fluxos de trabalho. Ideal para escritórios que desejam aumentar a produtividade e reduzir riscos operacionais. Permite criar, revisar e armazenar contratos de forma segura.",
       icon: Scale,
       image: "/produto-gestjus.png", 
-      url: "https://gestjus.com.br/",
+      url: "https://gestjusbr.netlify.app",
       tags: ["Jurídico", "Automação", "Software"],
       isDirectLink: true,
       isDisabled: false 
