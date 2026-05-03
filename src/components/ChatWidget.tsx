@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MessageCircle, X, Send, Bot, Loader2 } from "lucide-react";
 import { startGeminiChat } from "@/lib/gemini";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 interface Message {
   role: "user" | "model";
@@ -8,6 +9,7 @@ interface Message {
 }
 
 const ChatWidget = () => {
+  const isMobile = useIsMobile();
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -55,7 +57,6 @@ const ChatWidget = () => {
       const response = await result.response;
       setMessages((prev) => [...prev, { role: "model", text: response.text() }]);
     } catch (error: any) {
-      // 👇 ESSA LINHA VAI NOS CONTAR O SEGREDO 👇
       console.error("🔍 ERRO DETALHADO DO GEMINI:", error?.message || error);
       
       setMessages((prev) => [
@@ -68,14 +69,23 @@ const ChatWidget = () => {
   };
 
   return (
-    <div className="fixed bottom-6 right-6 z-[9999] flex flex-col items-end">
+    <div className={`fixed z-[9999] flex flex-col transition-all duration-300 ${
+      isOpen && isMobile 
+        ? "inset-0 bg-slate-50" 
+        : "bottom-6 right-6 items-end"
+    }`}>
       
       {isOpen && (
-        <div className="mb-4 w-[90vw] sm:w-[380px] h-[550px] bg-slate-50 rounded-2xl shadow-2xl flex flex-col overflow-hidden animate-in zoom-in-95 duration-200 border border-gray-200">
+        <div className={`
+          flex flex-col overflow-hidden animate-in zoom-in-95 duration-200
+          ${isMobile 
+            ? "w-full h-full" 
+            : "mb-4 w-[380px] h-[550px] max-h-[calc(100dvh-120px)] bg-slate-50 rounded-2xl shadow-2xl border border-gray-200"
+          }
+        `}>
           
           <div className="bg-[#1e1e1e] p-4 text-white flex justify-between items-center shrink-0">
             <div className="flex items-center gap-3">
-              {/* LOGO DA ASL SUBSTITUINDO O TEXTO */}
               <div className="w-10 h-10 rounded-full bg-white flex items-center justify-center overflow-hidden border border-gray-600 shadow-inner p-0.5">
                 <img 
                   src="/og-image.png" 
@@ -120,7 +130,12 @@ const ChatWidget = () => {
             )}
           </div>
 
-          <form onSubmit={handleSendMessage} className="p-4 bg-white border-t border-gray-100 flex gap-3 shrink-0">
+          <form 
+            onSubmit={handleSendMessage} 
+            className={`p-4 bg-white border-t border-gray-100 flex gap-3 shrink-0 ${
+              isMobile ? "pb-[calc(1rem+env(safe-area-inset-bottom))]" : ""
+            }`}
+          >
             <input 
               type="text"
               value={input}
@@ -135,14 +150,16 @@ const ChatWidget = () => {
         </div>
       )}
 
-      <div className="relative flex items-center justify-center">
-        {!isOpen && (
-          <span className="absolute w-full h-full rounded-full bg-[#00a8ff] opacity-40 animate-ping"></span>
-        )}
-        <button onClick={() => setIsOpen(!isOpen)} className="relative w-16 h-16 bg-[#00a8ff] text-white rounded-full shadow-xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300 z-10">
-          {isOpen ? <X className="w-7 h-7" /> : <MessageCircle className="w-7 h-7" />}
-        </button>
-      </div>
+      {(!isOpen || !isMobile) && (
+        <div className="relative flex items-center justify-center">
+          {!isOpen && (
+            <span className="absolute w-full h-full rounded-full bg-[#00a8ff] opacity-40 animate-ping"></span>
+          )}
+          <button onClick={() => setIsOpen(!isOpen)} className="relative w-16 h-16 bg-[#00a8ff] text-white rounded-full shadow-xl flex items-center justify-center hover:scale-105 active:scale-95 transition-all duration-300 z-10">
+            {isOpen ? <X className="w-7 h-7" /> : <MessageCircle className="w-7 h-7" />}
+          </button>
+        </div>
+      )}
     </div>
   );
 };
