@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { ExternalLink, ShieldCheck, PawPrint, ShoppingCart, Scale, ChevronLeft, ChevronRight, Play, Compass } from "lucide-react";
+import { ExternalLink, ShieldCheck, PawPrint, ShoppingCart, Scale, ChevronLeft, ChevronRight, Play, Compass, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DemoModal from "@/components/ui/DemoModal";
 
@@ -72,6 +72,17 @@ const Products = () => {
       tags: ["Landing Page", "Direito", "Justiça"],
       isDirectLink: true,
       isDisabled: false 
+    },
+    {
+      id: 7,
+      title: "Sandro Lima",
+      description: "Estratégias de alto impacto e mentoria especializada para escalar negócios e transformar visão em resultados extraordinários.",
+      icon: TrendingUp,
+      image: "/produto-sandro.png", 
+      url: "https://sandrolima.vercel.app/",
+      tags: ["Mentoria", "Negócios", "Estratégia"],
+      isDirectLink: true,
+      isDisabled: false
     }
   ];
 
