@@ -75,7 +75,7 @@ const Products = () => {
     },
     {
       id: 7,
-      title: "Sandro Lima",
+      title: "Sandro Lima Mentoria",
       description: "Estratégias de alto impacto e mentoria especializada para escalar negócios e transformar visão em resultados extraordinários.",
       icon: TrendingUp,
       image: "/produto-sandro.png", 
